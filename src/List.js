@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Card from './Card'
-import './List.css';
+import './List.css'
 
 export default function List(props) {
   return (
@@ -12,8 +12,10 @@ export default function List(props) {
         {props.cards.map((card) =>
           <Card
             key={card.id}
+            id={card.id}
             title={card.title}
             content={card.content}
+            onClickDelete= {props.onClickDelete}
           />
         )}
         <button
@@ -26,3 +28,4 @@ export default function List(props) {
     </section>
   )
 }
+ 
